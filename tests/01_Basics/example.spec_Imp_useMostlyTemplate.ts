@@ -1,11 +1,14 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from '@playwright/test'; //Browser - 
+//'@playwright/test' is fixture library which is used to run the tests. 
+// It provides a test runner, assertion library, and other utilities for 
+// writing and running tests with Playwright.
 
-test('has title', async ({ page }) => {
+test('has title', async ({ page }) => { //Page
   await page.goto('https://playwright.dev/');
 
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/Playwright/);
-});
+}); //Context
 
 test('get started link', async ({ page }) => {
   await page.goto('https://playwright.dev/');
